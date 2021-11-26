@@ -15,12 +15,12 @@
     </section>
     {{ if eq .Site.Params.comment "disqus" }}
         <a class="post-item-comment" title="查看评论" data-disqus-url="{{ .Permalink }}" href="{{ .Permalink }}#comment"></a>
-    {{ else if eq .Site.Params.comment "valine" }}
+    {{/*  {{ else if eq .Site.Params.comment "valine" }}
         <a class="post-item-comment" title="阅读量" href="{{ .Permalink }}">
             <span id="{{ .RelPermalink }}" class="leancloud_visitors">
                 <i class="leancloud-visitors-count"></i>
             </span>
-        </a>
+        </a>  */}}
 
         {{/*  <a class="post-item-comment" title="阅读量" href="{{ .Permalink }}#vcomments">
             <span class="valine-comment-count" data-xid="{{ .RelPermalink }}"></span>

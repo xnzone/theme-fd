@@ -34,7 +34,7 @@ theme = "theme-fd"
   quote = "知道越多，懂的越少"
   since = "2019-05-01"
   favicon = "https://gitee.com/ixnzone/images/raw/master/favicon.png"
-  comment = "disqus" # only can set valine or disqus # 只能配置valine或者disqus
+  comment = "valine" # only can set valine or disqus # 只能配置valine或者disqus
 
   [params.reward]
     enable = true
