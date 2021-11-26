@@ -154,14 +154,12 @@ body {
     align-items: flex-end;
     &:before{
       content: "";
-      width: 0;
       height: 2px;
       display: block;
       position: absolute;
       bottom: -2px;
       left: 0;
       background-color: #7db9de;
-      transition: .5s .5s all ease-out;
     }
     &:after{
       display: inline-block;
@@ -953,5 +951,3 @@ pre {
   padding: 5px 0;
   font-size: 13px;
 }
-
-
