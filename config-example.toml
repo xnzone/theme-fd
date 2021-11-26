@@ -1,7 +1,7 @@
-baseURL = "http://example.org"
+baseURL = "http://theme-fd.xnzone.ga/"
 languageCode = "en-us"
 title = "XNZONE"
-theme = "fd"
+theme = "theme-fd"
 
 [[menu.main]]                       # config your menu          # 配置目录
   name = "首页"                      # can change if you want    # 可以修改
@@ -34,15 +34,17 @@ theme = "fd"
   quote = "知道越多，懂的越少"
   since = "2019-05-01"
   favicon = "https://gitee.com/ixnzone/images/raw/master/favicon.png"
+  comment = "disqus" # only can set valine or disqus # 只能配置valine或者disqus
+
   [params.reward]
     enable = true
     wechat = "/images/wechat-reward.png"
-  comment="valine"
+  
   [params.valine]
     appid = ""
     appkey = ""
   [params.disqus]
-    name = "xnzone"
+    name = "theme-fd"
 
   [params.busuanzi]
     enable = true
@@ -70,3 +72,15 @@ theme = "fd"
 
 [taxonomies]
   category = "category"
+
+[markup]
+  [markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "monokai"
+  tabWidth = 2
