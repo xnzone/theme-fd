@@ -10,4 +10,4 @@ thumb: "/thumbs/wiki.png"
 ---
 
 ## 标题1
-狗屁不通文章生成器
+狗屁不通文章[生成器](www.baidu.com)

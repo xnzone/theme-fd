@@ -434,11 +434,6 @@ body {
       content: " ¶";
     }
   }
-  a:not([href*="#{$domain}"]):not([href^="#"]):not([href^="/"]):not([target="_blank"]),
-  a[href^="#note"]{
-    vertical-align:super;
-    font-size: smaller;
-  }
   blockquote {
     font-size: 13px;
     padding: 5px 10px;
