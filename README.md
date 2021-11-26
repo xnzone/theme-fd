@@ -42,6 +42,7 @@ hugo new post/2021-11-24-hello-world.md
 ```
 
 ## vercel部署example
+现在不允许`vercel.json`配置环境变量，所以需要在环境变量页面添加`HUGO_VERSION`版本，具体操作可以参考[vercel](https://vercel.com/docs/concepts/deployments/build-step#framework-versioning)
 ```bash
 hugo version && mkdir -p themes/theme-fd && cp -R ../layouts ../assets ../archetypes themes/theme-fd/ && hugo -D --gc
 ```
