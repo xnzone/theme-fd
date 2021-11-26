@@ -1,0 +1,33 @@
+<title>
+    {{ $rel := .RelPermalink }}
+    {{ $name := "" }}
+    {{ range .Site.Menus.main -}}
+        {{ if eq $rel .URL }}
+            {{ $name = .Name }}
+        {{ end }}
+    {{- end }}
+
+    {{ range .Site.Params.headers -}}
+        {{ if eq $rel .URL }}
+            {{ $name = .Name }}
+        {{ end }}
+    {{- end }}
+    {{ if eq $rel "/" }} {{ $name = "" }} {{ end }}
+    {{ if eq $name "" }}
+        {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}
+        {{ if $paginator }}
+            {{ $pgnum := $paginator.PageNumber }}
+            {{ if ne $pgnum 1}}
+                {{ $name = printf "第%d页" $pgnum }} 
+            {{ end }}
+        {{ else if .IsPage }}
+            {{ $name = .Title }}
+        {{ end }}
+    {{ end }}
+
+    {{ if eq $name "" }}
+        {{ .Site.Title }}
+    {{ else }}
+        {{ $name }} | {{ .Site.Title }}
+    {{ end }}
+</title>

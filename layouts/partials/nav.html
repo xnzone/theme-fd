@@ -1,0 +1,16 @@
+<nav class="navigation">
+    <input class="navigation-toggle" type="checkbox" id="menu" />
+    <label class="navigation-avatar" for="menu"></label>
+    <label class="navigation-mask" for="menu"></label>
+    <ul class="navigation-list">
+        {{ $rel := .RelPermalink }}
+        {{ range .Site.Menus.main -}}
+            {{if gt .Weight 0 }}
+            <li class="navigation-item {{ if eq $rel .URL }} current {{ end }}">
+                <a class="navigation-item-link" href="{{ .URL | safeURL }}">{{ partial .Identifier }} {{ .Name }}</a>
+            </li> 
+            {{ end }}
+        {{- end }}
+    </ul>
+</nav>
+

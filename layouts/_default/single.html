@@ -1,0 +1,9 @@
+{{ define "main" }}
+    <section class="page-content">
+        <article class="post-content">
+            {{ .Content }}
+        </article>
+    </section>
+    {{ partial "reward.html" . }}
+    {{ partial "comment.html" . }}
+{{ end }}

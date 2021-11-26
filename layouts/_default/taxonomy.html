@@ -1,0 +1,11 @@
+{{ define "header-section" }}
+    {{ partial "page-header" . }}
+{{ end }}
+{{ define "main"}}
+    <section class="post-list">
+        {{ range sort  (.Paginate .RegularPages).Pages "RelPermalink" "desc" }}
+        {{ partial "post-section.html" . }}
+        {{ end }}
+    </section>
+    {{ partial "pagination.html" . }}
+{{ end }}

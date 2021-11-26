@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section class="page-content">
+<section class="post-content">
+    <div class="zh post-container">
+        {{ if ne .Site.Params.quote "" }}
+            <blockquote>{{ .Site.Params.quote }}</blockquote>
+        {{ end }}
+
+        <br>
+        <h3>文章统计</h3>
+        <hr>
+        {{ $cnt := 0 }}
+        {{ $posts := (where .Site.RegularPages "Type" "==" "post") }}
+        {{ range $posts }}
+            {{ $cnt = add $cnt (countwords .Content) }}
+        {{ end }}
+
+        <p>本博客自{{ time.Format "2006年1月2日" .Site.Params.since }}起开始运行至今，共{{ len $posts }}篇文章，总字数
+        {{ if gt $cnt 10000 }}
+            {{ div $cnt 10000 }} 万 {{ mod $cnt 10000 }}
+        {{ else }}
+            {{ $cnt }}
+        {{ end }}
+        .</p>
+        <br>
+        {{ .Content }}
+    </div>
+</section>
+</section>
+{{ partial "reward.html" . }}
+{{ end }}

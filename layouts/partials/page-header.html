@@ -1,0 +1,8 @@
+<div class="post-cats cf">
+    {{ $rel := .RelPermalink }}
+    {{ range sort .Site.Params.headers "weight" -}}
+        {{ if .Enable }}
+        <a class="post-cat-tag{{ if eq $rel .URL }} active{{ end }}" href="{{ .URL | safeURL }}">{{ .Name }}</a>
+        {{ end }}
+    {{- end }}
+ </div>

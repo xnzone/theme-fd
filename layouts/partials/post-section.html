@@ -1,0 +1,29 @@
+<!-- index, wiki, tech, life 的post-->
+<article class="post-item">
+    {{ $thumb := .Params.thumb }}
+    {{ if ne .Site.Params.thumbs "" }}
+        {{ $thumb = printf "%s/%s" .Site.Params.thumbs $thumb }}
+    {{ end }}
+    {{ if eq $thumb ""}}
+        {{ $thumb = "https://gitee.com/ixnzone/images/raw/master/avatar.jpg" }}
+    {{ end }}
+    <i class="post-item-thumb"  style="background-image:url({{ $thumb }})"></i>
+    <section class="post-item-summary">
+        <h3 class="post-item-title"><a class="post-item-link" href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h3>
+        {{ $d := .Lastmod.Format (.Site.Params.dateFormatToUse | default "2006-01-02 15:04:05") }}
+        <time class="post-item-date timeago" datetime="{{ $d }}"></time>
+    </section>
+    {{ if eq .Site.Params.comment "disqus" }}
+        <a class="post-item-comment" title="查看评论" data-disqus-url="{{ .Permalink }}" href="{{ .Permalink }}#comment"></a>
+    {{ else if eq .Site.Params.comment "valine" }}
+        <a class="post-item-comment" title="阅读量" href="{{ .Permalink }}">
+            <span id="{{ .RelPermalink }}" class="leancloud_visitors">
+                <i class="leancloud-visitors-count"></i>
+            </span>
+        </a>
+
+        {{/*  <a class="post-item-comment" title="阅读量" href="{{ .Permalink }}#vcomments">
+            <span class="valine-comment-count" data-xid="{{ .RelPermalink }}"></span>
+        </a>  */}}
+    {{ end }}
+</article>

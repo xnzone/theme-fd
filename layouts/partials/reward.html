@@ -1,0 +1,12 @@
+{{ if .Site.Params.reward.enable }}
+<section class="wechat-related">
+    <div class="wechat-related-item">
+        <input class="wechat-related-checkbox" type="checkbox" id="wechat-paycode"/>
+        <label class="wechat-related-btn" title="微信赞赏码" for="wechat-paycode">
+        {{ partial "svgs/reward.svg" }}
+        {{ partial "svgs/reward_a.svg" }} 喜欢作者
+        </label>
+        <div class="wechat-paycode" style="background-image: url({{ .Site.Params.reward.wechat }});"></div>
+    </div>
+</section>
+{{ end }}

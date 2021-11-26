@@ -1,0 +1,86 @@
+baseURL = "http://theme-fd.xnzone.ga/"
+languageCode = "en-us"
+title = "XNZONE"
+theme = "theme-fd"
+
+[[menu.main]]                       # config your menu          # 配置目录
+  name = "首页"                      # can change if you want    # 可以修改
+  weight = 10                       # 0 represent disable       # 0代表不启用
+  identifier = "svgs/home.svg"      # don't modify              # 不要修改这个内容
+  url = "/"                         # better to no change       # 最好不要修改这个
+[[menu.main]]
+  name = "关于"
+  weight = 20
+  identifier = "svgs/about.svg"
+  url = "/about/"
+[[menu.main]]
+  name = "归档"
+  weight = 30
+  identifier = "svgs/archive.svg"
+  url = "/archive/"
+[[menu.main]]
+  name = "链接"
+  weight = 40
+  identifier = "svgs/link.svg"
+  url = "/links/"
+[[menu.main]]
+  name = "留言"
+  weight = 50
+  identifier = "svgs/comments.svg"
+  url = "/guestbook/"
+
+[params]
+  thumbs = "https://gitee.com/ixnzone/images/raw/master" 
+  quote = "知道越多，懂的越少"
+  since = "2019-05-01"
+  favicon = "https://gitee.com/ixnzone/images/raw/master/favicon.png"
+  comment = "disqus" # only can set valine or disqus # 只能配置valine或者disqus
+
+  [params.reward]
+    enable = true
+    wechat = "/images/wechat-reward.png"
+  
+  [params.valine]
+    appid = ""
+    appkey = ""
+  [params.disqus]
+    name = "theme-fd"
+
+  [params.busuanzi]
+    enable = true
+
+  [params.headers.home]
+    enable = true
+    name = "全部"
+    url = "/"
+    weight = 10
+  [params.headers.tech]
+    enable = true
+    name = "技术"
+    url = "/category/tech/" 
+    weight = 20
+  [params.headers.wiki]
+    enable = true
+    name = "知识库"
+    url = "/category/wiki/"
+    weight = 30
+  [params.headers.life]
+    enable = true
+    name = "生活"
+    url = "/category/life/"  
+    weight = 40
+
+[taxonomies]
+  category = "category"
+
+[markup]
+  [markup.highlight]
+  codeFences = true
+  guessSyntax = false
+  hl_Lines = ""
+  lineNoStart = 1
+  lineNos = false
+  lineNumbersInTable = true
+  noClasses = true
+  style = "monokai"
+  tabWidth = 2

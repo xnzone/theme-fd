@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    {{ partial "head.html" . }}
+    <body>
+        {{- partial "nav.html" . -}}
+        <main class="page-main">
+            <header class="page-header">
+                <hgroup class="page-hgroup">
+                    <h1 class="page-title"><a class="page-title-link" href="{{ .RelPermalink }}">
+                        {{ $title := .Title }}
+                        {{ if .IsHome }}
+                            {{ $title = .Site.Title }}
+                        {{ else }}
+                            {{ $rel := .RelPermalink }}
+                            {{ range .Site.Params.headers -}}
+                                {{ if eq $rel .URL }}{{ $title = .Name }} {{ end }}
+                            {{- end }}
+                        {{ end }}
+                        {{ $title }}
+                    </a></h1>
+                    {{- block "header-section" .}} {{- end }}
+                </hgroup>
+            </header>
+            {{ block "main" . }}{{ end }}
+            <footer class="page-footer">
+                {{- partial "footer.html" . -}}
+            </footer>
+        </main>
+        
+    </body>
+</html>

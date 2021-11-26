@@ -1,0 +1,17 @@
+{{ define "header-section" }}
+    {{ partial "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<section class="page-content">
+    <section class="post-list">
+        {{ $paginator := .Paginate (where .Site.RegularPages "Type" "post") }}   
+        {{ range sort $paginator.Pages ".Params.Lastmod" "desc" }}
+            {{ partial "post-section.html" . }}
+        {{ end }}
+    </section>
+    {{ partial "pagination.html" . }}
+</section>
+{{ end }}
+
+
