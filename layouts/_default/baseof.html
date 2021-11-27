@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     {{ partial "head.html" . }}
+    {{ if .Params.math }}
+        {{ partial "mathjax.html" . }}
+    {{ end }}
     <body>
         {{- partial "nav.html" . -}}
         <main class="page-main">

@@ -8,4 +8,5 @@ tags: []
 category: tech 
 thumb: ""
 type: post
+math: false
 ---
