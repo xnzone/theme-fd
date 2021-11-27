@@ -1,6 +1,6 @@
 baseURL = "http://theme-fd.xnzone.ga/"
 languageCode = "en-us"
-title = "XNZONE"
+title = "xnzone"
 theme = "theme-fd"
 
 [[menu.main]]                       # config your menu          # 配置目录
