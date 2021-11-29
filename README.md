@@ -31,4 +31,4 @@ $avatar: 'https://gitee.com/ixnzone/images/raw/master/avatar.jpg';
 ```
 
 ### About Category
-If you have no content of some category, there will go to 404.html, so you can change `config.toml` to hide some headers
+If you have no content of some category, you will get 404.html, so you can modify `config.toml` to hide some headers
