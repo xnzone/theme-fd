@@ -30,10 +30,10 @@ theme = "theme-fd"
   url = "/guestbook/"
 
 [params]
-  thumbs = "https://gitee.com/ixnzone/images/raw/master" 
+  thumbs = "https://cdn.jsdelivr.net/gh/ovbox/solar" 
   quote = "知道越多，懂的越少"
   since = "2019-05-01"
-  favicon = "https://gitee.com/ixnzone/images/raw/master/favicon.png"
+  favicon = "https://cdn.jsdelivr.net/gh/ovbox/solar/favicon.png"
   comment = "valine" # only can set valine or disqus # 只能配置valine或者disqus
 
   [params.reward]

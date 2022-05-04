@@ -24,7 +24,7 @@ touch _override.scss
 在`_override.scss`中添加
 
 ```scss
-$avatar: 'https://gitee.com/ixnzone/images/raw/master/avatar.jpg';
+$avatar: 'https://cdn.jsdelivr.net/gh/ovbox/solar/avatar.jpg';
 $domain: "localhost:1313";
 ```
 
