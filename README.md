@@ -27,7 +27,7 @@ touch _override.scss
 add blow content in `_override.scss`
 
 ```scss
-$avatar: 'https://cdn.jsdelivr.net/gh/ovbox/solar/avatar.jpg';
+$avatar: 'https://gitcode.net/xnzone/solar/-/raw/master/avatar.jpg';
 ```
 
 ### About Category

@@ -5,7 +5,7 @@
         {{ $thumb = printf "%s/%s" .Site.Params.thumbs $thumb }}
     {{ end }}
     {{ if eq $thumb ""}}
-        {{ $thumb = "https://cdn.jsdelivr.net/gh/ovbox/solar/avatar.jpg" }}
+        {{ $thumb = "https://gitcode.net/xnzone/solar/-/raw/master/avatar.jpg" }}
     {{ end }}
     <i class="post-item-thumb"  style="background-image:url({{ $thumb }})"></i>
     <section class="post-item-summary">
