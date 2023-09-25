@@ -1,5 +1,5 @@
 ## Live Demo
-see [here](https://theme-fd.xnzone.ga)
+see [here](https://theme-fd.xnzone.eu.org)
 
 ## Features
 - dynamic config of nav

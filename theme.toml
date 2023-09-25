@@ -5,13 +5,13 @@ name = "theme-fd"
 license = "MIT"
 licenselink = "https://github.com/xnzone/theme-fd/blob/master/LICENSE"
 description = ""
-homepage = "http://theme-fd.xnzone.ga/"
+homepage = "http://theme-fd.xnzone.eu.org/"
 tags = []
 features = []
 min_version = "0.83.1"
 
 [author]
   name = "xnzone"
-  homepage = "https://xnzone.ga"
+  homepage = "https://xnzone.eu.org"
 
 
